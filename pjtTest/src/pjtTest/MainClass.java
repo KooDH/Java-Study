@@ -4,16 +4,13 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
-		ChildClass child1 = new ChildClass(); //생성자 호출
+		ChildClass child = new ChildClass(); // 자식 클래스 생성
+		ParentClass parent = new ParentClass();
 		
-//		child1.name = "hong gil dong";
-//		child1.gender = "male";
-//		child1.age = 20; // 숫자이기 때문에 ""를 안넣어줘도 됨.
+		child.childFun(); 	// 자식 메서드 호출
+		child.parentFun(); 	//자식 클래스를 생성했지만. 부모클래스를 상속 받았기 때문에
+							//부모 메서드까지 호출할 수 있음.
 		
 		
-		child1.setInfo("hong", "gender", 20);		
-		child1.getInfo(); 	// getinfo를 불러옴. 하지만
-							// 값을 지정해주지 않았기에 
-							// 호출부
-	}
+	}//결곽 값은 자식 클래스를 호출 했지만, 부모 클래스 먼저 호출된것을 확인할 수 있다.
 }
