@@ -6,37 +6,28 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
-		System.out.println("점수를 입력하세요");
+//		System.out.println("Input Number");
+//		
+//		Scanner scanner = new Scanner(System.in);
+//		
+//		int inputNum = scanner.nextInt();//사용자가 숫자를 입력하는 변수를 만들어줌.
+//		
+//		for (int i = 0; i < 10; i++) { //9까지 루프를 돌린다.
+//			System.out.println(inputNum * i);
+//		}
+//		
+//		
+//		
+//		scanner.close();//한번 쓰고나면 resources를 회수하는 습관을 가질것.
 		
-		Scanner inputNum = new Scanner(System.in);
+		int i = 10;
 		
-		int score = inputNum.nextInt();//사용자가 숫자를 입력하는 변수를 만들어줌.
+		do { //while문과의 차이점은 
+			 //do ~ while은 do 내부에있는 한번은 무조건 실행 
+			 //그 이후는 같음.
+			System.out.println("무조건 1번은 실행합니다.");
+			i++;
+		} while ( i < 13); //do ~ while
 		
-		
-		switch (score) {
-				//비교할 대상의 값
-		case 90://case는 몇개를 적어주든 상관은 없음.
-			System.out.println("Score is : 90");
-			break; //break가 걸리게 되면 밑의 코드를 실행하지 않는다.
-			
-		case 80:
-			System.out.println("Score is : 80");
-			break;
-			
-		case 70:
-			System.out.println("Score is : 70");
-			break;
-			
-		case 60:
-			System.out.println("Score is : 60");
-			break; 
-
-		default://모든 case가 아닐경우 default를 실행
-				//필수 조건은 아니기 때문에 필요에 따라 쓸것.
-			System.out.println("Score is : ?");
-			break;
-		}
-		
-		inputNum.close();//한번 쓰고나면 resources를 회수하는 습관을 가질것.
-	}
+	}//main
 }
